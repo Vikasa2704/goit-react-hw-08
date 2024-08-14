@@ -30,13 +30,7 @@ const RegistrationForm = () => {
     });
 
     const handleSubmit = (values, actions) => {
-        dispatch(
-        register({
-            name: values.name,
-            email: values.email,
-            password: values.password,
-        })
-        );
+        dispatch(register((values)));
         actions.resetForm();
     };
     

@@ -1,9 +1,9 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useId } from "react";
-import css from "./ContactForm.module.css";
+import css from "./LoginForm.module.css";
 import { useDispatch } from "react-redux";
-import { login } from "../../redux/auth/operations";
+import { login } from "../../redux/auth/operations"; 
 
 const LoginForm = () => {
   const emailFieldId = useId();
@@ -24,16 +24,9 @@ const LoginForm = () => {
       .required("Password is required field!")
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    dispatch(
-      login({
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
-    form.reset();
+  const handleSubmit = (values, actions) => {
+    dispatch(login((values)));
+    actions.resetForm();
   };
 
   return (

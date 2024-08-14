@@ -9,9 +9,10 @@ export const register = createAsyncThunk(
       const response = await goitApi.post('/users/signup', registerData);
       setToken(response.data.token);
       return response.data;
-    } catch (error) {
+  } catch (error) {
+      console.error('Error:', error.response.data); // це може дати більше інформації
       return thunkAPI.rejectWithValue(error.message);
-    }
+  }
   }
 );
 
