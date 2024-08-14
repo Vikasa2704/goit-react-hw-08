@@ -1,0 +1,16 @@
+.form {
+    width: 320px;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.btn{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	margin: auto;
+}

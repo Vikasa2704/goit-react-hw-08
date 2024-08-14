@@ -1,0 +1,18 @@
+.nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: 700;
+    color: #2a363b;
+  }
+  
+  .link.active {
+    color: firebrick;;
+  }
+  
