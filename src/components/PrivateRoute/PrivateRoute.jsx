@@ -2,7 +2,7 @@
 
 const PrivateRoute = () => {
   return (
-    <div>PrivateRoute</div>
+    <div></div>
   )
 }
 

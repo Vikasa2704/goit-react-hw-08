@@ -10,7 +10,6 @@ export const register = createAsyncThunk(
       setToken(response.data.token);
       return response.data;
   } catch (error) {
-      console.error('Error:', error.response.data); // це може дати більше інформації
       return thunkAPI.rejectWithValue(error.message);
   }
   }
@@ -30,18 +29,18 @@ export const login = createAsyncThunk(
 );
 export const logout = createAsyncThunk(
     "auth/logout",
-     async (_, thunkAPI) => {
-       try {
-         const response = await goitApi.post('/users/logout');
-         clearToken();
-         return response.data;
-       } catch (error) {
-         return thunkAPI.rejectWithValue(error.message);
-       }
-     }
-   );
-   
-   export const refreshUser = createAsyncThunk(
+    async (_, thunkAPI) => {
+      try {
+        const response = await goitApi.post('/users/logout');
+        clearToken();
+        return response.data;
+      } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
+      }
+    }
+  );
+  
+  export const refreshUser = createAsyncThunk(
     'auth/refresh',
     async (_, thunkAPI) => {
       // Reading the token from the state via getState()

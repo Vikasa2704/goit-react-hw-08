@@ -11,7 +11,7 @@ import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
 
-import styles from './ContactsPage.module.css';
+import css from './ContactsPage.module.css';
 import Loader from '../../components/Loader/Loader';
 
 const ContactsPage = () => {
@@ -25,7 +25,7 @@ const ContactsPage = () => {
 	}, [dispatch]);
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={css.wrapper}>
 			<ContactForm />
 			<div>
 				<SearchBox />
