@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useId } from 'react';
-import css from './ContactForm.module.css';
+import css from './RegistrationForm.module.css';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 
@@ -29,18 +29,17 @@ const RegistrationForm = () => {
 		.required('Password is required field!'),
     });
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const form = e.currentTarget;
+    const handleSubmit = (values, actions) => {
         dispatch(
         register({
-            name: form.elements.name.value,
-            email: form.elements.email.value,
-            password: form.elements.password.value,
+            name: values.name,
+            email: values.email,
+            password: values.password,
         })
         );
-        form.reset();
+        actions.resetForm();
     };
+    
 
     return (
         <div className={css.form}>
