@@ -27,3 +27,33 @@
     margin-bottom: 20px;
     box-shadow: 0px 0px 10px rgba(227, 228, 237, 0.37);
 }
+@media screen and (min-width: 768px) {
+    .container{
+        
+        img {
+            width: 768px;
+            height: 768px;
+        }
+
+        title {
+            max-width: 600px;
+            font-size: 60px;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    .wrapper {
+
+        img {
+
+            width: 1280px;
+            height: 1280px;
+        }
+
+        title {
+            font-size: 80px;
+        }
+    }
+}

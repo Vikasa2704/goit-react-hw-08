@@ -23,3 +23,18 @@
     cursor: pointer;
 	
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .wrapper {
+        gap: 10px;
+
+        username {
+            font-size: 12px;
+        }
+
+        btn {
+            font-size: 12px;
+        }
+    }
+
+
+}

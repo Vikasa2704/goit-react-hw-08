@@ -4,7 +4,7 @@
     border-radius: 8px;
     padding: 20px;
     min-height: 50vh;
-    max-width: 500px;
+    max-width: 100%;
 }
 
 
@@ -20,8 +20,7 @@
 	border-radius: 8px;
 	padding-block: 8px;
 	padding-inline: 12px;
-	min-width: 300px;
-	width: 90%;
+	width: 100%;
 	margin-bottom: 30px;
 }
 .btn{
