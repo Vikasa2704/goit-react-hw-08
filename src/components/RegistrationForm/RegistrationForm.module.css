@@ -1,12 +1,19 @@
 .form {
-    width: 320px;
+    box-shadow: 0 0 30px #e3e4ed5e;
+    border: 2px solid rgba(255, 255, 255, .18);
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 50vh;
+    max-width: 500px;
 }
+
 
 .label {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
     text-align: start;
+    color: #00cbff80;
 }
 .field {
 	border-style: none;

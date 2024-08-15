@@ -1,27 +1,27 @@
 .searchBox {
-  padding: 30px;
-  label {
-      display: flex;
-      margin: 0 auto 20px;
-      flex-direction: column;
-      max-width: 400px;
-      gap: 10px;
-      font-size: 24px;
-      font-weight: 400;
-      color: whitesmoke;
+padding: 30px;
+label {
+    display: flex;
+    margin: 0 auto 20px;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: 400;
+    color: whitesmoke;
 
-      input {
-          padding: 8px;
-          border-radius: 6px;
-          border-color: whitesmoke;
-          background-color: transparent;
-          font-size: 18px;
-          color: whitesmoke;
-          box-shadow: 4px 4px 8px rgb(0 203 255 / 50%);
+    input {
+        padding: 8px;
+        border-radius: 6px;
+        border-color: whitesmoke;
+        background-color: transparent;
+        font-size: 18px;
+        color: whitesmoke;
+        box-shadow: 4px 4px 8px rgb(0 203 255 / 50%);
 
-          &:focus {
-              outline: none;
-          }
-      }
-  }
+        &:focus {
+            outline: none;
+        }
+    }
+}
 }

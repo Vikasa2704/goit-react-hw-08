@@ -8,8 +8,9 @@
     display: flex;
     justify-content: center;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 22px;
     max-width: 100%;
+    color: tomato;
 }
 .btn{
     display: flex;

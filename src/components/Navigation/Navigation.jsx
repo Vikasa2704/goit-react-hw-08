@@ -15,12 +15,12 @@ const Navigation = () => {
       <FcHome size="24"/>
       <span>Home</span>
       </NavLink>
-      {isLoggedIn && (
+      
         <NavLink className={css.link} to="/contacts">
-        <FcContacts />
+        <FcContacts size="24"/>
         <span>Contacts</span>
         </NavLink>
-      )}
+      
     </nav>
   );
 };
