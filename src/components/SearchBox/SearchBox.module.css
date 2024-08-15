@@ -13,10 +13,11 @@
       input {
           padding: 8px;
           border-radius: 6px;
-          border-color: black;
+          border-color: whitesmoke;
           background-color: transparent;
           font-size: 18px;
           color: whitesmoke;
+          box-shadow: 4px 4px 8px rgb(0 203 255 / 50%);
 
           &:focus {
               outline: none;

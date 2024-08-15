@@ -7,20 +7,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-/* .container{
-  backdrop-filter: blur(30px);
-  box-shadow: 0 0 30px #e3e4ed5e;
-  border: 2px solid rgba(255, 255, 255, .18);
-  border-radius: 8px;
-  padding: 20px;
-  min-height: 80vh;
-} */
+
 a {
   font-weight: 500;
   color: whitesmoke;
@@ -31,7 +19,7 @@ a:hover {
 }
 
 body {
-  background-color: rgb(185, 106, 106);
+  background-color: rgb(116, 120, 122);
   margin: 0 auto;
   border-radius: 12px;
   padding: 30px;

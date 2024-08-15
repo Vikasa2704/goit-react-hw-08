@@ -12,7 +12,7 @@ const Navigation = () => {
   return (
     <nav className={css.nav}>
       <NavLink className={css.link} to="/">
-      <FcHome />
+      <FcHome size="24"/>
       <span>Home</span>
       </NavLink>
       {isLoggedIn && (

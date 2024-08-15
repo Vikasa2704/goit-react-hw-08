@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
-import DocumentTitle from '../../components/DocumentTitle/DocumentTitle';
-import styles from './NotFoundPage.module.css';
+import s from './NotFoundPage.module.css';
 
 const NotFoundPage = () => {
-	return (
-		<div className={styles.centering}>
-			<DocumentTitle>Page not found</DocumentTitle>
-			<h1 className={styles.title}>404 - Page Not Found</h1>
-			<p>Sorry, the page you are looking for could not be found.</p>
-			<button>
-				<Link to='/'>Go to Homepage</Link>
-			</button>
-		</div>
-	);
+    return (
+        <div>
+            <h1 className={s.notFound}>404 - Page Not Found</h1>
+            <Link className={s.link} to="/">Go to Home</Link>
+        </div>
+    )
 };
 
 export default NotFoundPage;

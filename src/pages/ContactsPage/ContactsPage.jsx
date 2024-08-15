@@ -7,7 +7,7 @@ import {
 	selectLoading,
 } from '../../redux/contacts/selectors';
 import ContactList from '../../components/ContactList/ContactList';
-import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
+import Error from '../../components/Error/Error';
 import { useEffect } from 'react';
 import { fetchContacts } from '../../redux/contacts/operations';
 
@@ -25,14 +25,14 @@ const ContactsPage = () => {
 	}, [dispatch]);
 
 	return (
-		<div className={css.wrapper}>
+		<div className={css.container}>
 			<ContactForm />
 			<div>
 				<SearchBox />
 				{loading && <Loader />}
-				{error && <ErrorMessage />}
+				{error && <Error />}
 				{contacts.length > 0 && !error && !loading && (
-					<ContactList contacts={contacts} />
+					<ContactList />
 				)}
 			</div>
 		</div>

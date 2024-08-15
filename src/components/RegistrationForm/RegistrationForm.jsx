@@ -2,8 +2,10 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useId } from 'react';
 import css from './RegistrationForm.module.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../redux/auth/operations';
+import { selectIsLoggedIn } from '../../redux/auth/selectors';
+import { Navigate } from 'react-router-dom';
 
 const RegistrationForm = () => {
     const nameFieldId = useId();
@@ -11,6 +13,7 @@ const RegistrationForm = () => {
 	const passwordFieldId = useId();
 
     const dispatch = useDispatch();
+    const isLoggedIn = useSelector(selectIsLoggedIn);
     const initialValues = { name: '', email: '', password: ''};
 
     const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
@@ -33,6 +36,9 @@ const RegistrationForm = () => {
         dispatch(register((values)));
         actions.resetForm();
     };
+    if (isLoggedIn) {
+        return <Navigate to='/' />;
+    }
     
 
     return (

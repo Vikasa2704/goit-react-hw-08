@@ -1,10 +1,15 @@
-#root {
+/* #root {
 	max-width: 1440px;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 15px;
 	text-align: center;
 }
 
+.loader {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+}
 .logo {
 	height: 6em;
 	padding: 1.5em;
@@ -38,14 +43,14 @@
 }
 
 .read-the-docs {
-	color: #888;
+color: #888;
 }
 .container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-   padding: 20px;
-  margin: 0 auto;
-  max-width: 100%;
-}
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+margin: 0 auto;
+max-width: 100%;
+} */

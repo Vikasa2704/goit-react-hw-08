@@ -12,11 +12,12 @@
     max-width: 100%;
 }
 .btn{
+    display: flex;
 	border-radius: 8px;
-    gap: 8px;
+    gap: 12px;
     margin-bottom: 25px;
     padding: 10px 20px;
-    background-color: #781b3f4a;
+    background-color: #3430324a;
     color: white;
     cursor: pointer;
 	

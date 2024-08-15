@@ -1,15 +1,18 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useId } from "react";
+import { Navigate } from "react-router-dom";
 import css from "./LoginForm.module.css";
-import { useDispatch } from "react-redux";
-import { login } from "../../redux/auth/operations"; 
+import { useDispatch, useSelector } from "react-redux";
+import { logIn } from "../../redux/auth/operations"; 
+import { selectIsLoggedIn } from "../../redux/auth/selectors";
 
 const LoginForm = () => {
   const emailFieldId = useId();
   const passwordFieldId = useId();
 
   const dispatch = useDispatch();
+  const isLoggedIn = useSelector(selectIsLoggedIn)
   const initialValues = { email: "", password: "" };
 
   const passwordRules = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
@@ -25,10 +28,13 @@ const LoginForm = () => {
   });
 
   const handleSubmit = (values, actions) => {
-    dispatch(login((values)));
+    dispatch(logIn((values)));
     actions.resetForm();
   };
 
+  if (isLoggedIn) {
+    return <Navigate to='/' />;
+}
   return (
     <div className={css.form}>
       <Formik
@@ -61,7 +67,7 @@ const LoginForm = () => {
           <ErrorMessage name="password" component="div" className={css.error} />
 
           <button className={css.btn} type="submit">
-            Log In
+            Login
           </button>
         </Form>
       </Formik>
