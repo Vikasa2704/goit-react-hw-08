@@ -5,7 +5,7 @@ import css from './RegistrationForm.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
-import { Navigate } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 
 const RegistrationForm = () => {
     const nameFieldId = useId();
@@ -66,6 +66,12 @@ const RegistrationForm = () => {
                     <ErrorMessage name="password" component="div" className={css.error} />
 
                     <button className={css.btn} type="submit">Register</button>
+                    <span className={css.text}>
+            Already have an account?{' '}
+            <Link className={css.link} to="/login">
+              Sign in
+            </Link>
+          </span>
                 </Form>
             </Formik>
         </div>

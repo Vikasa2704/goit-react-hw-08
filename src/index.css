@@ -93,7 +93,7 @@ body {
   background-color: rgb(116, 120, 122);
   margin: 0 auto;
   border-radius: 12px;
-  padding: 20px;
+  /* padding: 20px; */
   max-width: 100%;
 }
 

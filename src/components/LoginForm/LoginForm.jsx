@@ -1,7 +1,9 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/no-unescaped-entities */
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useId } from "react";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import css from "./LoginForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logIn } from "../../redux/auth/operations"; 
@@ -69,6 +71,12 @@ const LoginForm = () => {
           <button className={css.btn} type="submit">
             Login
           </button>
+          <span className={css.text}>
+            Don't have an account? {' '}
+            <Link className={css.link} to="/register">
+              Sign up
+            </Link>
+          </span>
         </Form>
       </Formik>
     </div>
